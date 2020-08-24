@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> ONLINE LIBRARY </title>
+<script>
+function addlist()
+{
+var text=document.forms[0].elements[0].value;
+var newli=document.createElement("Li");
+var textli=document.createTextNode(text);
+newli.appendChild(textli);
+document.getElementById("books").appendChild(newli);
+
+}
+function removelist()
+{
+var list=document.getElementById("books");
+var num=document.forms[0].elements[2].value;
+list.removeChild(list.childNodes[num]);
+
+}
+function fontsize()
+{
+ var size=document.forms[0].elements[4].value;
+document.getElementById("books").style.fontSize=size;
+document.getElementById("1").style.fontSize=size;
+document.getElementById("2").style.fontSize=size;
+document.getElementById("3").style.fontSize=size;
+document.getElementById("4").style.fontSize=size;
+
+}
+function fontfamily()
+{
+ var family=document.forms[0].elements[6].value;
+document.getElementById("books").style.fontFamily=family;
+document.getElementById("1").style.fontFamily=family;
+document.getElementById("2").style.fontFamily=family;
+document.getElementById("3").style.fontFamily=family;
+document.getElementById("4").style.fontFamily=family;
+}
+
+</script>
+
+<style>
+
+.image{
+border-radius:50px;
+width:100px;
+height:100px;
+float:center;
+background:white;
+}
+
+body{
+background-image:url("book.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+#header{
+color:white;
+width:100%;
+height:150px;
+background:#2F4F4F;
+}
+
+#sidebar{
+width:270px;
+height:500px;
+background:#2F4F4F;
+float:left;
+}
+
+.button{
+width:100px;
+height:30px;
+margin:auto;
+border-radius:50px;
+}
+
+#text{
+border-radius:10px;
+width:250px;
+height:30px
+}
+
+#list{
+margin-left:370px;
+margin-top:120px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.navbar {
+    font-size: 18px;
+    background-image: linear-gradient(260deg, #231709 0%, #481f01   100%);
+}
+.main-nav {
+    list-style-type: none;
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+}
+.nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+</style>
+
+</head>
+<body >
+<nav class="navbar">
+        <img src="logoo.jpg" width=70px height=70px />
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="admin books.html" class="nav-links">Books</a>
+            </li>
+			            <li>
+                <a href="Login.html" class="nav-links">Logout</a>
+            </li>
+        </ul>
+ </nav>
+<div id="header" >
+<center><img src="admin logo.png" class="image"></center>
+</div>
+
+<div id="sidebar"> 
+<form>
+<center>
+</br></br></br>
+<input type="text" id="text" placeholder="  Item Text"></br>
+<input type="button" class="button" id="1" value="Add" onclick="addlist()"></br></br></br>
+<input type="text" id="text" placeholder="  Item No"></br>
+<input type="button" class="button" id="2" value="Remove" onclick="removelist()"> </br></br></br>
+<input type="text" id="text" placeholder="  Font-Size"></br>
+<input type="button" class="button" id="3" value="Change" onclick="fontsize()"></br></br></br>
+<input type="text" id="text" placeholder="  Font-Family"></br>
+<input type="button" class="button" id="4" value="Change" onclick="fontfamily()">
+</center>
+</form>
+</div>
+
+<div id="list">
+<ol type="i" id="books" >
+
+</ol>
+</div>
+
+
+</body>
+</html>

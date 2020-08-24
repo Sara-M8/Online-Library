@@ -1,0 +1,276 @@
+<html>
+<head>
+<title> ONLINE LIBRARY </title>
+<style>
+
+body
+{
+	background-image:url("bg2.jpg");	
+	background-size:cover;
+	color:white;
+}
+RFORM {                                         
+    margin-left: 70px; 
+    font-weight: bold ; 
+    float: left; 
+    clear: left; 
+    width: 100px; 
+    text-align: left; 
+    margin-right: 10px; 
+    font-family:sans-serif,bold, Arial, Helvetica; 
+    font-size:14px; 
+} 
+   
+div {  
+    box-sizing: border-box; 
+    width: 100%; 
+    border: 100px solid black; 
+    float: left; 
+    align-content: center; 
+    align-items: center; 
+} 
+   
+form {                                         
+    margin: 0 auto; 
+    width: 600px; 
+}
+input[type="text"] {
+  width: 50%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+input[type="password"] {
+  width: 50%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="password"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.BUttonStylr{
+text-align:center;
+}
+.btn{
+border:1px solid #00b0b0;
+font-size:20px;
+cursor:pointer;
+transition:0.8s;
+position:relative;
+overflow:hidden;
+}
+.btn1{
+color:#ccbbdd;
+}
+.btn1:hover{
+color:#00b0b0;
+}
+.btn::before{
+content: "";
+position:absolute;
+left:0;
+width:100%;3498db
+height:0%;
+background:#z-index:-1;
+transition:0.08s;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.navbar {
+    font-size: 18px;
+    background-image: linear-gradient(260deg, #231709 0%, #481f01   100%);
+}
+.main-nav {
+    list-style-type: none;
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+}
+.nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+   .footer
+   {
+     background:rgba(139,69,19,.9);
+     height:8%;
+     position: bottom;
+     bottom: 0px;
+     text-align:center;
+     color:white;
+     width:100%;
+    line-height:15px;
+    }
+</style>
+<script>
+function RFORM()                                    
+{ 
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["Telephone"];  
+    var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["Password"];  
+    var confirm = document.forms["RegForm"]["Confirm"];
+    var address = document.forms["RegForm"]["Address"];	
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    if (address.value == "")                               
+    { 
+        window.alert("Please enter your address."); 
+        name.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address. e.g info@gmail.com"); 
+        email.focus(); 
+        return false; 
+    } 
+	
+	  if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+	  
+	  if (confirm.value == "")                        
+    { 
+        window.alert("Please confirm the password"); 
+        confirm.focus(); 
+        return false; 
+    }
+	if (password.value!=confirm.value) { 
+        alert ("\nPassword did not match: Please try again...") 
+        return false; 
+    } 
+	if (phone.value == "")                           
+    { 
+        window.alert("Please enter your telephone number."); 
+        phone.focus(); 
+        return false; 
+    }
+	alert("You registered successfully ");
+	return true;
+    
+}
+</script>
+</head>
+<body>
+<nav class="navbar">
+        <img src="logoo.jpg" width=70px height=70px />
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="Login.html" class="nav-links">LogIn</a>
+            </li>
+			<li>
+                <a href="about.html" class="nav-links">AboutUs</a>
+            </li>
+           
+        </ul>
+ </nav>
+<br>
+<h1 style="text-align: center"> REGISTRATION FORM </h1>           
+<form name="RegForm" action="Login.html" onsubmit="return RFORM()" method="post">
+    <p>NAME: <input type="text" placeholder="enter your name" name="Name"> </p>        
+    <p> ADRESS: <input type="text" placeholder="enter your adress" name="Address">  </p>
+    <p>E-MAIL: <input type="text" placeholder="enter your e-mail" name="EMail">  </p> 
+    <p>PASSWORD: <input type="password" placeholder="enter a password" name="Password"> </p>
+	<p>CONFIRM : <input type="password" placeholder="confirm password" name="Confirm"> </p>
+    <p>TELEPHONE: <input type="text" placeholder="enter your number" name="Telephone"> </p> 	
+    <p><input type="submit" value="send" name="Submit" class="btn btn1">   
+        <input type="reset" value="Reset" name="Reset" class="btn btn1">   
+    </p>          
+	</form> 
+	<br><br>	<br><br>
+
+</body>
+</html>

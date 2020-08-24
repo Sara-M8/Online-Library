@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+   <meta charse="UTF-8">
+   <title> ONLINE LIBRARY </title>
+   <STYLE> 
+ .navbar {
+    font-size: 18px;
+    background-image: linear-gradient(260deg, #231709 0%, #481f01   100%);
+}
+.main-nav {
+    list-style-type: none;
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.navbar-toggle {
+    position: absolute;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+}
+.nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+    body{
+      
+     background-image:url('bk3.jpg');
+     background-repeat:no-repeat;
+     background-size:100%;
+    
+    }
+   .footer{
+   
+     background:rgba(139,69,19,.9);
+     height:8%;
+     position: absolute;
+     bottom: 0px;
+     text-align:center;
+     color:white;
+     width:100%;
+    line-height:15px;
+    }
+  
+    .books{ 
+    overflow:scroll;
+    scroll-behavior: smooth;
+    background:rgba(245,222,179,.5);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    max-height:85%;
+    width:40%;
+    position: absolute;
+    right:10px;
+    top: 80px;
+    font-weight:500;
+    font-size:24px;
+    font-family:Times;
+    line-height:27px;
+    }
+    .shelves{
+    background:rgba(245,222,179,.1);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    height:60%;
+    width:55%;
+    position: absolute;
+    left:40px;
+    top: 140px;
+    }
+    .bio {
+    background-image:url("bio2.png");
+    width:28%;
+    height:30%;
+    background-size:100%;
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-left:15px;
+    margin-right:35px;
+    }
+    .phil {
+    width:35%;
+    height:30%;
+    background-image:url("philosophy.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    display:inline-block;
+    margin-right:15px;
+    padding-down:15px;
+   }
+   .maths{ 
+   height:30%;
+   width:35%;
+   background-image:url("maths2.png");
+   background-size:100%;
+   display:inline-block;
+   margin-right:60px;
+    background-repeat:no-repeat;
+   }
+
+   .phys{
+   background-image:url("phys.png");
+   height:30%;
+   width:35%;  background-size:100%;
+   display:inline-block;
+   background-repeat:no-repeat;
+   margin-right:15px;
+    margin-left:15px;
+   }
+   .his{
+   height:30%;
+   width:35%;
+   background-image:url("his3.png");
+   background-size:100%;
+   background-repeat:no-repeat;
+   display:inline-block;
+   margin-right:1px;
+ 
+   }
+   .geo{
+   height:15%;
+   width:20%;
+   background-image:url("geo1.png");
+   background-size:100%;
+   float:right;
+    background-repeat:no-repeat;
+   margin-right:15px;
+    padding-top:50px;
+   }
+  .art{
+   margin-left:20px;
+   margin-right:30px;
+   height:30%;
+   background-image:url("art.png");
+   background-size:100%;
+   background-repeat:no-repeat;
+   float:left;
+   width:18%;
+   }
+  .comp{
+    height:30%;
+   width:20%;
+   background-image:url("comp1.png");
+   background-size:80%;
+   background-repeat:no-repeat;
+   display:inline-block;
+   margin-left:50px;
+   margin-right:35px;  
+    }
+  .chem{
+   height:15%;
+   width:18%;
+   background-image:url("chem9.png");
+   background-size:60%;
+   background-repeat:no-repeat;
+   display:inline-block;
+ 
+   }
+   </STYLE>
+   <SCRIPT>
+   
+   </SCRIPT>
+ </HEAD>
+    
+
+
+ <BODY >
+ <nav class="navbar">
+        <img src="logoo.jpg" width=70px height=70px />
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="home.html" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="lib.html" class="nav-links">Libraries</a>
+            </li>
+			<li>
+                <a href="Login.html" class="nav-links">Logout</a>
+            </li>
+  </ul> </nav>
+  <div class="shelves">
+    <a href="#art">  <div class="art"></div> </a>
+    <a href="#bio"> <div class="bio"> </div> </a>
+    <a href="#phil"> <div class="phil"></div> </a>
+    <a href="#geo"> <div class="geo"></div>  </a>
+    <a href="#phys"> <div class="phys"></div> </a>
+    <a href="#his"> <div class="his"></div> </a>
+    <a href="#comp"> <div class="comp"></div> </a>
+    <a href="#maths"> <div class="maths"> </div> </a>
+    <a href="#chem"> <div class="chem"></div> </a>
+  </div>
+
+  <div class="books">
+    <p id="bio"> 
+   Biology
+   <ul>
+<li> The Vital Question - Nick Lane </li><li> The Selfish Gene - Richard Dawkins </li>
+<li> Genome- Matt Ridley </li><li> Hacking Darwin (Genetic Engineering and the Future of Humanity) - Jamie Metzl</li>
+<li> The Biology of Cancer - Robert A. Weinberg, Robert A Weinberg </li>
+   </ul> </p>
+<p id="art"> Art and Novels
+<ul> 
+<li> The Alchemist - Paulo Coelho </li><li> The Count of Monte Cristo - Alexandre Dumas </li>
+<li> The Hobbit - J.R.R. Tolkien </li><li> To Kill a Mockingbird - Harper Lee</li>
+<li> THe color Purple - Alice Walker </li><li>Anna Karenina- Leo Tolstoy</li>
+</ul> </p>
+<p id="phil"> Philosophy
+<ul>
+<li>Beyond good and evil</li> <li>Meditation of firsr philosophy</li><li>The Art of War</li>
+<li>Being and Nothingness</li><li>A History of Western Philosophy</li><li>The Treatise of Human Nature</li>
+<li>Apoology</li> <li>Being and Time</li><li>The Phenomenology of Mind</li><li>Ecce Homo</li>
+</ul> </p>
+  <p id="geo"> 
+   Geography
+   <ul>
+<li>Prisoners of Geography (Ten Maps That Explain Everything About the World)- Tim Marshall  </li>
+<li> OXFORD Atlas of the World </li><li> Cityscapes of New Orleans - Richard Campanella</li>
+<li> Introduction to Geography - Arthur Getis, Mark Bjelland Associate Professor, Victoria Getis </li>
+<li>World Regional Geography Concepts - Lydia Mihelic Pulsipher, Alex Pulsipher </li>
+   </ul> </p>
+<p id="his"> History
+<ul> 
+<li> The Western Wind - Samantha Harvey</li><li> Lords of the desert - James Barr</li>
+<li> Sapiens: A Brief History of Humankind - Yuval Noah Harari  </li><li>The Histories - Herodotus</li>
+<li>The Secret History - Donna Tartt  </li>
+<li>	History of the Arabs - Philip Khuri Hitti,  Walid Khalidi </li>
+</ul> </p>
+<p id="phys"> Physics
+<ul> 
+<li> 	The Tao of Physics: An Exploration of the Parallels between Modern Physics and Eastern Mysticism - Fritjof Capra  </li>
+<li> Fundamentals of Physics - David Halliday, Jearl Walker, and Robert Resnick</li>
+<li> The Elegant Universe - Brian Greene  </li>
+<li> Introduction to Quantum Mechanics - David J. Griffiths</li><li> Brief Answers to the Big Questions - Stephen Hawking</li>
+<li>	Relativity: The Special and the General Theory - Albert Einstein </li><li> A Brief History of Time - Stephen Hawking </li>
+</ul> </p>
+<p id="chem">Chemistry
+<ul> 
+<li>The Disappearing Spoon - Sam Kean </li><li> Uncle Tungsten - Oliver Sacks</li>
+<li> Fundamentals of Analytical Chemistry - Donald M. West, F. James Holler, and Stanley R. Crouch </li>
+<li>Chemistry: The Central Science - H. Eugene LeMay Jr. and Theodore L. Brown</li>
+<li> The Double Helix: A Personal Account of the Discovery of the Structure of DNA-  James Watson</li>
+<li>Introduction to Spectroscopy - Donald L. Pavia, Gary M. Lampman, and George S. Kriz</li>
+<li>A guidebook to mechanism in organic chemistry - Peter Sykes </li>
+<li>Oxygen: The Molecule that Made the World - Nick Lane</li>
+</ul> </p>
+<p id="comp">Computer
+<ul> 
+<li>The C Programming Language - Brian Kernighan and Dennis Ritchie</li> 
+<li>Introduction to Algorithms - Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen</li>
+<li>Structure and Interpretation of Computer Programs - Gerald Jay Sussman and Hal Abelson</li>
+<li>Design Patterns: Elements of Reusable Object-Oriented Software - Erich Gamma, John Vlissides, Ralph Johnson, and Richard Helm</li>
+<li>The Soul of a New Machine - Tracy Kidder</li>
+<li>The Pragmatic Programmer - Andy Hunt and Dave Thomas</li>
+<li>Clean Code - Robert Cecil Martin</li>
+<li>HTML & CSS: Design and Build Web Sites - Jon Duckett</li>
+</ul> </p>
+<p id="maths"> Mathematics
+<ul> 
+<li>Humble Pi: A Comedy of Maths Errors - Matt Parker</li> 
+<li>Flatland - Edwin Abbott Abbott</li>
+<li>Philosophiæ Naturalis Principia Mathematica - Isaac Newton</li>
+<li>Fermat's Last Theorem - Simon Singh</li>
+<li>What Is Mathematics? - Herbert Robbins and Richard Courant</li>
+<li>Statistics Without Tears - Derek Rowntree</li>
+<li>Calculus on Manifolds - Michael Spivak</li>
+<li>Euclid's Elements - Euclid</li>
+</ul> </p>
+  </div>
+  <div class="footer">
+  <p>Contact information: <a href="yourlibrary@gmail">
+ yourlibrary@gmail</a> <br> © Copyright 2019</p>
+</div>
+<embed src="music.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" />
+ </BODY>
+</HTML>
